@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+	#mover{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
+
+	#mover2{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+
+
+	#soltar{
+		width: 220px;
+		height: 220px;
+		border: solid 2px black;
+	}
+
+	.soltado{
+		background-color: #D62743;
+	}
+
+	.hover{
+		background-color: blue;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#mover").draggable();
+		$("#mover2").draggable();
+		$("#soltar").droppable({
+			hoverClass: "hover",
+			accept: "#mover",
+			drop:function(event, ui){
+              $(this).addClass('soltado').find("p").text("Elemento soltado");
+			}
+		});
+	});
+</script>
+
+<div id="mover" class="ui-widget-content">
+	<p>Mover</p>
+</div>
+
+<div id="mover2" class="ui-widget-content">
+	<p>Mover otro</p>
+</div>
+
+<div id="soltar" >
+	<p>Soltar aquí</p>
+</div>
+
+	
+</body>
+</html>

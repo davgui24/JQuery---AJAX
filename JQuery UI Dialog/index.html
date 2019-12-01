@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
+</head>
+<body>
+
+<div id="dialogo" title="ventana">
+	<p>Hola, estoy dentro de una ventana de dialogo</p>
+</div>
+<button id="boton">Abrir ventana</button>
+<script type="text/javascript">
+	$(document).ready(function(){
+       $("#dialogo").dialog({
+       	 autoOpen: false,
+         modal: true,
+         show: {
+         	effect: "blind",
+         	duration: 3000
+         },
+
+         hide: {
+         	effect: "explode",
+         	duration: 3000
+         }
+       })
+
+
+
+       $("#boton").click(function(event) {
+       	 $("#dialogo").dialog("open");
+       });
+		});
+</script>
+
+	
+</body>
+</html>

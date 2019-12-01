@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<style type="text/css">
+	#seleccionar .ui-selecting {background-color: #FECA40;}
+	#seleccionar .ui-selected {background-color: #F39814; color: white;}
+	#seleccionar {list-style-type: none; margin: 0; padding: 0; width: 60%;}
+	#seleccionar li {margin: 3px; padding: 0.4em; font-size: 1.4em height: 18px}
+
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#seleccionar").selectable({
+			stop: function(){
+              var resultado = $("#resultado").empty();
+              $(".ui-selected", this).each(function(){
+              	var index = $("#seleccionar li").index(this);
+              	resultado.append("Seleccionó" + (index+1)+"<br>");
+              });
+			}
+		});            
+            
+	});
+</script>
+
+
+<ol id="seleccionar">
+	<li class="ui-widgwt-content">Item1</li>
+	<li class="ui-widgwt-content">Item2</li>
+	<li class="ui-widgwt-content">Item3</li>
+	<li class="ui-widgwt-content">Item4</li>
+	<li class="ui-widgwt-content">Item5</li>
+	<li class="ui-widgwt-content">Item6</li>
+	<li class="ui-widgwt-content">Item7</li>
+</ol>
+<br>
+<div id="resultado"></div>
+
+
+</body>
+</html>

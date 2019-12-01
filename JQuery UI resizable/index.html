@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+	#resizable{
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+	}
+
+	#p{
+	  padding: 50px;
+	  width: 50%;
+      height: 60%;	
+      background-color: red;     
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#resizable").resizable({
+			animate: true,
+		});            
+            
+	});
+</script>
+
+
+<div id="contenedor">
+	<div id="resizable" class="ui-widget-content">
+		<center> <p id="p">Cambiar tamaño</p> </center>
+	</div>
+</div>
+
+	
+</body>
+</html>

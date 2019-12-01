@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+	#mover{
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#mover").draggable(            
+             {
+             	//axis: "y",
+                cursor: "move",
+                revert: true,
+                start: function(){
+                	$("#mover").css("background-color", "red");
+                },
+                stop: function(){
+                	$("#mover").css("background-color", "blue");
+                },
+              }
+			);
+	});
+</script>
+
+<div id="mover" class="ui-widget-content">
+	<p>Mover</p>
+</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+       $("#volumen").slider({
+       	range: true,
+       	min: 0,
+       	max: 500,
+       	values: [75,250],
+       	slide: function(event, ui){
+          $("#rangoA").text(ui.values[0]);
+          $("#rangoB").text(ui.values[1]);
+       	}
+       });
+		});
+</script>
+
+
+
+
+<div id="volumen"></div>
+<p id="rangoA"></p>
+<p id="rangoB"></p>
+
+	
+</body>
+</html>

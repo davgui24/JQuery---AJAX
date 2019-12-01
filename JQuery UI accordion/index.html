@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var iconos = {
+			header:"ui-icon-circle-arrow-e",
+			activeHeader:"ui-icon-circle-arrow-s"
+		};
+			$("#accordion").accordion({
+				icons: iconos
+			});
+		});
+</script>
+
+
+
+	<div id="accordion">
+		<h3>Sección 1</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, ad, perferendis. Enim nesciunt, odio eveniet maiores iure neque voluptatum? A autem itaque veritatis, atque libero omnis ullam impedit unde veniam.</p>
+		</div>
+		<h3>Sección 2</h3>
+		<div>
+			<p>Eaque porro dolores autem animi molestias doloremque consequatur, officia atque totam ducimus ab labore optio nesciunt iusto amet consequuntur at ullam, quo ratione neque ea accusantium cum necessitatibus. Soluta, tempora.</p>
+		</div>
+		<h3>Sección 3</h3>
+		<div>
+			<p>Voluptatibus necessitatibus dignissimos qui alias perspiciatis, corporis, sapiente eveniet perferendis. Explicabo reprehenderit numquam, natus assumenda, consequatur illum sapiente placeat adipisci at nostrum facilis mollitia fuga. Sit labore, quo dolorem sed.</p>
+		</div>
+	</div>
+	
+</body>
+</html>

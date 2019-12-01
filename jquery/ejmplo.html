@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title id ="titulo">Titulo 1</title>
+		<style type="text/css"></style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>	
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>	
+	</head>
+	<body>
+	<script>
+		$(document).ready(function(){
+          $("#boton").click(function(){
+
+           if ($("#titulo").text()=="Titulo 1") {
+           	 $("#titulo").text("");
+             $("#titulo").append("Titulo 2");
+             $("#p").html("<h1 id='h'>Este es el Título 2");
+             	$("#h").css({
+             "color":"red",
+             "border":"solid 2px blue"
+           	});
+           }else if ($("#titulo").text()=="Titulo 2") {
+           	$("#titulo").text("");
+           	$("#titulo").append("Titulo 1");
+           	$("#p").html("<h1 id='h'>Este es el Título 1");
+           	$("#h").css({
+             "color":"blue",
+             "border":"solid 2px red"
+           	});
+           }
+          });
+
+
+
+
+          $("#ocultar").click(function(){
+              $("#p").hide(4000);
+          });
+
+
+
+
+
+           $("#mostrar").click(function(){
+              $("#p").show(4000);
+          });
+
+
+           $("#eliminar").click(function(){
+              $("#p").remove(4000);
+          });
+
+
+           $("#seleccion").change(function(){
+           	setTimeout(function(){
+           	   $("#h1").html($("#seleccion").val());
+           	}, 2000);
+			
+			
+		});
+	});
+
+
+		
+
+
+	</script>
+
+	<button id="boton">Cambiar titulo</button>
+	<button id="ocultar">Ocultar titulo</button>
+	<button id="mostrar">Mostrar titulo</button>
+	<button id="eliminar">Eliminar titulo</button>
+
+	<br>
+
+	<select id="seleccion">
+		<option value="1">Opción 1</option>
+		<option value="2">Opción 2</option>
+		<option value="3">Opción 3</option>
+		<option value="4">Opción 4</option>
+	</select>
+
+	<p id="p"></p>
+	<h1 id="h1"></h1>
+
+
+	</body>
+	</html>
+</html>
+
+
